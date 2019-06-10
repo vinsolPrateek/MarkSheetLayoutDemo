@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB58A47322BA6E83002D5450 /* MarkSheetCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58A47222BA6E83002D5450 /* MarkSheetCollectionViewLayout.swift */; };
 		ABCB617522AE274F004341D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB617422AE274F004341D5 /* AppDelegate.swift */; };
 		ABCB617722AE274F004341D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB617622AE274F004341D5 /* ViewController.swift */; };
 		ABCB617A22AE274F004341D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABCB617822AE274F004341D5 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB58A47222BA6E83002D5450 /* MarkSheetCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkSheetCollectionViewLayout.swift; sourceTree = "<group>"; };
 		ABCB617122AE274F004341D5 /* MarkSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABCB617422AE274F004341D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABCB617622AE274F004341D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB58A47122BA6E83002D5450 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				AB58A47222BA6E83002D5450 /* MarkSheetCollectionViewLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		ABCB616822AE274F004341D5 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 		ABCB61B822AE5906004341D5 /* Collection View Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AB58A47122BA6E83002D5450 /* Layout */,
 				ABCB61B922AE5906004341D5 /* Cells */,
 				ABCB61BD22AE5906004341D5 /* Reusable Views */,
 			);
@@ -255,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB58A47322BA6E83002D5450 /* MarkSheetCollectionViewLayout.swift in Sources */,
 				ABCB617722AE274F004341D5 /* ViewController.swift in Sources */,
 				ABCB61CA22AE5906004341D5 /* RowHeaderSupplementaryView.swift in Sources */,
 				ABCB61C722AE5906004341D5 /* ColumnHeaderSupplementaryView.swift in Sources */,

@@ -14,7 +14,7 @@ class MarksCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak private var marksLabel: UILabel!
 
-    func setupCell(userMarks: Double, outOf totalMarks: Double) {
+    func setup(userMarks: Double, outOf totalMarks: Double) {
         marksLabel.text = String(format: "%.2f / %.2f", userMarks, totalMarks)
     }
 }

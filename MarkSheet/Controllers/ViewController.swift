@@ -58,7 +58,7 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MarksCollectionViewCell.identifier, for: indexPath) as! MarksCollectionViewCell
         let userMarks = students[indexPath.section].marks[subject(atColumn: indexPath.item)] ?? 0
-        cell.setupCell(userMarks: userMarks, outOf: Consts.maximumAllotedMarks)
+        cell.setup(userMarks: userMarks, outOf: Consts.maximumAllotedMarks)
         return cell
     }
     
