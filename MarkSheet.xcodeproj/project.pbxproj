@@ -21,6 +21,7 @@
 		ABCB61C922AE5906004341D5 /* RowHeaderSupplementaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABCB61C222AE5906004341D5 /* RowHeaderSupplementaryView.xib */; };
 		ABCB61CA22AE5906004341D5 /* RowHeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB61C322AE5906004341D5 /* RowHeaderSupplementaryView.swift */; };
 		ABCB61CB22AE5906004341D5 /* HeaderSupplementaryViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB61C422AE5906004341D5 /* HeaderSupplementaryViewProtocol.swift */; };
+		ABCB61CE22AE5CD2004341D5 /* MarkSheetCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB61CD22AE5CD1004341D5 /* MarkSheetCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		ABCB61C222AE5906004341D5 /* RowHeaderSupplementaryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RowHeaderSupplementaryView.xib; sourceTree = "<group>"; };
 		ABCB61C322AE5906004341D5 /* RowHeaderSupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowHeaderSupplementaryView.swift; sourceTree = "<group>"; };
 		ABCB61C422AE5906004341D5 /* HeaderSupplementaryViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSupplementaryViewProtocol.swift; sourceTree = "<group>"; };
+		ABCB61CD22AE5CD1004341D5 /* MarkSheetCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkSheetCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		ABCB61B822AE5906004341D5 /* Collection View Classes */ = {
 			isa = PBXGroup;
 			children = (
+				ABCB61CC22AE5CD1004341D5 /* Layout */,
 				ABCB61B922AE5906004341D5 /* Cells */,
 				ABCB61BD22AE5906004341D5 /* Reusable Views */,
 			);
@@ -161,6 +164,14 @@
 				ABCB61C322AE5906004341D5 /* RowHeaderSupplementaryView.swift */,
 			);
 			path = "Row Header";
+			sourceTree = "<group>";
+		};
+		ABCB61CC22AE5CD1004341D5 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				ABCB61CD22AE5CD1004341D5 /* MarkSheetCollectionViewLayout.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 				ABCB61B422AE50FF004341D5 /* Student.swift in Sources */,
 				ABCB61CB22AE5906004341D5 /* HeaderSupplementaryViewProtocol.swift in Sources */,
 				ABCB61B722AE5213004341D5 /* Dictionary+Extension.swift in Sources */,
+				ABCB61CE22AE5CD2004341D5 /* MarkSheetCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

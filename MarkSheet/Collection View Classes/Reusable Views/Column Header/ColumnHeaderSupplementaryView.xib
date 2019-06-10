@@ -43,7 +43,7 @@
             <connections>
                 <outlet property="titleLbl" destination="ANJ-rx-Cil" id="0Bj-mN-E2B"/>
             </connections>
-            <point key="canvasLocation" x="116.40625" y="90.8203125"/>
+            <point key="canvasLocation" x="115.2" y="89.955022488755631"/>
         </collectionReusableView>
     </objects>
 </document>
