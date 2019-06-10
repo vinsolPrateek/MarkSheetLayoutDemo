@@ -25,6 +25,24 @@ class ViewController: UIViewController {
 
     @IBOutlet weak private var collectionView: UICollectionView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        registerSupplimentaryViews()
+    }
+    
+    private func registerSupplimentaryViews() {
+        func registerReusableView(ofType type: HeaderSupplementaryViewProtocol.Type) {
+            let nib = UINib(nibName: type.identifier, bundle: nil)
+            collectionView.register(nib, forSupplementaryViewOfKind: type.identifier, withReuseIdentifier: type.reuseIdentifier)
+        }
+        registerReusableView(ofType: RowHeaderSupplementaryView.self)
+        registerReusableView(ofType: ColumnHeaderSupplementaryView.self)
+    }
+    
+    private func subject(atColumn columnIndex: Int) -> Subject {
+        return Subject.allCases[columnIndex]
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -38,7 +56,27 @@ extension ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MarksCollectionViewCell.identifier, for: indexPath) as! MarksCollectionViewCell
+        let userMarks = students[indexPath.section].marks[subject(atColumn: indexPath.item)] ?? 0
+        cell.setupCell(userMarks: userMarks, outOf: Consts.maximumAllotedMarks)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerViewType: HeaderSupplementaryViewProtocol.Type
+        let title: String
+        if kind == RowHeaderSupplementaryView.identifier {
+            headerViewType = RowHeaderSupplementaryView.self
+            title = students[indexPath.section].name
+        } else if kind == ColumnHeaderSupplementaryView.identifier {
+            headerViewType = ColumnHeaderSupplementaryView.self
+            title = subject(atColumn: indexPath.item).title
+        } else {
+            return UICollectionReusableView()
+        }
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: headerViewType.identifier, withReuseIdentifier: headerViewType.reuseIdentifier, for: indexPath) as! HeaderSupplementaryView
+        headerView.setTitle(title)
+        return headerView
     }
 }
 
