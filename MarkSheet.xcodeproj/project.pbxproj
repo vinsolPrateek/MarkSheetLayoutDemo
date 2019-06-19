@@ -20,7 +20,8 @@
 		ABCB61C822AE5906004341D5 /* ColumnHeaderSupplementaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABCB61C022AE5906004341D5 /* ColumnHeaderSupplementaryView.xib */; };
 		ABCB61C922AE5906004341D5 /* RowHeaderSupplementaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABCB61C222AE5906004341D5 /* RowHeaderSupplementaryView.xib */; };
 		ABCB61CA22AE5906004341D5 /* RowHeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB61C322AE5906004341D5 /* RowHeaderSupplementaryView.swift */; };
-		ABCB61CB22AE5906004341D5 /* HeaderSupplementaryViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB61C422AE5906004341D5 /* HeaderSupplementaryViewProtocol.swift */; };
+		ABCB61CB22AE5906004341D5 /* CollectionReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCB61C422AE5906004341D5 /* CollectionReusableViewProtocol.swift */; };
+		ABE28B5622BA67C500BE86E7 /* CollectionDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE28B5522BA67C500BE86E7 /* CollectionDecorationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,8 @@
 		ABCB61C022AE5906004341D5 /* ColumnHeaderSupplementaryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColumnHeaderSupplementaryView.xib; sourceTree = "<group>"; };
 		ABCB61C222AE5906004341D5 /* RowHeaderSupplementaryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RowHeaderSupplementaryView.xib; sourceTree = "<group>"; };
 		ABCB61C322AE5906004341D5 /* RowHeaderSupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowHeaderSupplementaryView.swift; sourceTree = "<group>"; };
-		ABCB61C422AE5906004341D5 /* HeaderSupplementaryViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSupplementaryViewProtocol.swift; sourceTree = "<group>"; };
+		ABCB61C422AE5906004341D5 /* CollectionReusableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionReusableViewProtocol.swift; sourceTree = "<group>"; };
+		ABE28B5522BA67C500BE86E7 /* CollectionDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDecorationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,9 +140,9 @@
 		ABCB61BD22AE5906004341D5 /* Reusable Views */ = {
 			isa = PBXGroup;
 			children = (
-				ABCB61BE22AE5906004341D5 /* Column Header */,
-				ABCB61C122AE5906004341D5 /* Row Header */,
-				ABCB61C422AE5906004341D5 /* HeaderSupplementaryViewProtocol.swift */,
+				ABCB61C422AE5906004341D5 /* CollectionReusableViewProtocol.swift */,
+				ABE28B5422BA66F100BE86E7 /* Decoration Views */,
+				ABE28B5322BA66E100BE86E7 /* Supplementary Views */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -161,6 +163,23 @@
 				ABCB61C322AE5906004341D5 /* RowHeaderSupplementaryView.swift */,
 			);
 			path = "Row Header";
+			sourceTree = "<group>";
+		};
+		ABE28B5322BA66E100BE86E7 /* Supplementary Views */ = {
+			isa = PBXGroup;
+			children = (
+				ABCB61BE22AE5906004341D5 /* Column Header */,
+				ABCB61C122AE5906004341D5 /* Row Header */,
+			);
+			path = "Supplementary Views";
+			sourceTree = "<group>";
+		};
+		ABE28B5422BA66F100BE86E7 /* Decoration Views */ = {
+			isa = PBXGroup;
+			children = (
+				ABE28B5522BA67C500BE86E7 /* CollectionDecorationView.swift */,
+			);
+			path = "Decoration Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,10 +259,11 @@
 				ABCB61CA22AE5906004341D5 /* RowHeaderSupplementaryView.swift in Sources */,
 				ABCB61C722AE5906004341D5 /* ColumnHeaderSupplementaryView.swift in Sources */,
 				ABCB61B322AE50FF004341D5 /* Subject.swift in Sources */,
+				ABE28B5622BA67C500BE86E7 /* CollectionDecorationView.swift in Sources */,
 				ABCB617522AE274F004341D5 /* AppDelegate.swift in Sources */,
 				ABCB61C522AE5906004341D5 /* MarksCollectionViewCell.swift in Sources */,
 				ABCB61B422AE50FF004341D5 /* Student.swift in Sources */,
-				ABCB61CB22AE5906004341D5 /* HeaderSupplementaryViewProtocol.swift in Sources */,
+				ABCB61CB22AE5906004341D5 /* CollectionReusableViewProtocol.swift in Sources */,
 				ABCB61B722AE5213004341D5 /* Dictionary+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

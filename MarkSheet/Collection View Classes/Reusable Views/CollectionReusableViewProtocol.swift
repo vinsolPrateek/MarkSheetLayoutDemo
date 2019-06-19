@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol HeaderSupplementaryViewProtocol: class {
-    
+protocol CollectionReusableViewProtocol: class {
     static var identifier: String { get }
     static var reuseIdentifier: String { get }
-    
-    func setTitle(_ title: String)
 }
 
+protocol HeaderSupplementaryViewProtocol: CollectionReusableViewProtocol {
+    func setTitle(_ title: String)
+}
 typealias HeaderSupplementaryView = UICollectionReusableView & HeaderSupplementaryViewProtocol

@@ -22,22 +22,11 @@
                     <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKj-4y-uyx" userLabel="SeparatorLineView">
-                    <rect key="frame" x="0.0" y="49" width="202" height="1"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="qAR-4m-taY"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="GKj-4y-uyx" firstAttribute="bottom" secondItem="8AL-ck-Asy" secondAttribute="bottom" id="0iQ-9F-JZr"/>
-                <constraint firstItem="GKj-4y-uyx" firstAttribute="leading" secondItem="8AL-ck-Asy" secondAttribute="leading" id="2FI-S6-RUy"/>
                 <constraint firstItem="1Tc-CV-e1J" firstAttribute="leading" secondItem="INw-SX-vdu" secondAttribute="leading" constant="8" id="eOc-JW-1Yy"/>
                 <constraint firstItem="INw-SX-vdu" firstAttribute="trailing" secondItem="1Tc-CV-e1J" secondAttribute="trailing" constant="7" id="fBQ-ua-CUX"/>
-                <constraint firstItem="GKj-4y-uyx" firstAttribute="bottom" secondItem="8AL-ck-Asy" secondAttribute="bottom" id="jhb-7b-fRh"/>
-                <constraint firstItem="GKj-4y-uyx" firstAttribute="trailing" secondItem="8AL-ck-Asy" secondAttribute="trailing" id="phg-zP-xgt"/>
                 <constraint firstItem="1Tc-CV-e1J" firstAttribute="centerY" secondItem="INw-SX-vdu" secondAttribute="centerY" id="vfv-Eo-WT4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="INw-SX-vdu"/>
