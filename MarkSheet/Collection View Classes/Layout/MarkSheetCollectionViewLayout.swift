@@ -10,7 +10,7 @@ import UIKit
 
 class MarkSheetCollectionViewLayout: UICollectionViewLayout {
 
-    private enum Consts {
+    private enum Constants {
         static let rowHeaderWidth: CGFloat = 100
         static let oneRowHeight: CGFloat = 50
         static let columnHeaderHeight: CGFloat = 40
@@ -26,12 +26,12 @@ class MarkSheetCollectionViewLayout: UICollectionViewLayout {
     }
     
     private var columnWidth: CGFloat {
-        let contentWidth = collectionViewContentSize.width - Consts.rowHeaderWidth
+        let contentWidth = collectionViewContentSize.width - Constants.rowHeaderWidth
         return (contentWidth / CGFloat(numberOfColumns))
     }
     
     override var collectionViewContentSize: CGSize {
-        let contentHght = Consts.columnHeaderHeight + Consts.oneRowHeight * CGFloat(numberOfRows)
+        let contentHght = Constants.columnHeaderHeight + Constants.oneRowHeight * CGFloat(numberOfRows)
         return CGSize(width: collectionView?.bounds.width ?? 0, height: contentHght)
     }
     
@@ -65,12 +65,12 @@ extension MarkSheetCollectionViewLayout {
     }
     
     private func columnIndex(at xPosition: CGFloat) -> Int {
-        let index = max(0, Int((xPosition - Consts.rowHeaderWidth) / columnWidth))
+        let index = max(0, Int((xPosition - Constants.rowHeaderWidth) / columnWidth))
         return min(index, numberOfColumns - 1)
     }
     
     private func rowIndex(at yPosition: CGFloat) -> Int {
-        let index = max(0, Int((yPosition - Consts.columnHeaderHeight) / Consts.oneRowHeight))
+        let index = max(0, Int((yPosition - Constants.columnHeaderHeight) / Constants.oneRowHeight))
         return min(index, numberOfRows - 1)
     }
 }
@@ -112,9 +112,9 @@ extension MarkSheetCollectionViewLayout {
     private func frame(forRow row: Int, column: Int) -> CGRect {
         let cellWidth = columnWidth
         var frame = CGRect.zero
-        frame.origin.x = Consts.rowHeaderWidth + cellWidth * CGFloat(column)
-        frame.origin.y = Consts.columnHeaderHeight + Consts.oneRowHeight * CGFloat(row)
-        frame.size = CGSize(width: cellWidth, height: Consts.oneRowHeight)
+        frame.origin.x = Constants.rowHeaderWidth + cellWidth * CGFloat(column)
+        frame.origin.y = Constants.columnHeaderHeight + Constants.oneRowHeight * CGFloat(row)
+        frame.size = CGSize(width: cellWidth, height: Constants.oneRowHeight)
         return frame
     }
 
@@ -139,7 +139,7 @@ extension MarkSheetCollectionViewLayout {
     }
     
     private func indexPathsForVisibleRows(in rect: CGRect) -> [IndexPath] {
-        guard rect.minX <= Consts.rowHeaderWidth  else { return [] }
+        guard rect.minX <= Constants.rowHeaderWidth  else { return [] }
         let startRowIndex = rowIndex(at: rect.minY)
         let endRowIndex = rowIndex(at: rect.maxY)
         
@@ -151,7 +151,7 @@ extension MarkSheetCollectionViewLayout {
     }
     
     private func indexPathsForVisibleColumns(in rect: CGRect) -> [IndexPath] {
-        guard rect.minY <= Consts.columnHeaderHeight  else { return [] }
+        guard rect.minY <= Constants.columnHeaderHeight  else { return [] }
         let startColumnIndex = columnIndex(at: rect.minX)
         let endColumnIndex = columnIndex(at: rect.maxX)
         
@@ -167,11 +167,11 @@ extension MarkSheetCollectionViewLayout {
         
         if elementKind == ColumnHeaderSupplementaryView.identifier {
             let cellWidth = columnWidth
-            let xPosition = Consts.rowHeaderWidth + (cellWidth * CGFloat(indexPath.item))
-            layoutAttributes.frame = CGRect(x: xPosition, y: 0, width: cellWidth, height: Consts.columnHeaderHeight)
+            let xPosition = Constants.rowHeaderWidth + (cellWidth * CGFloat(indexPath.item))
+            layoutAttributes.frame = CGRect(x: xPosition, y: 0, width: cellWidth, height: Constants.columnHeaderHeight)
         } else if elementKind == RowHeaderSupplementaryView.identifier {
-            let yPosition = Consts.columnHeaderHeight + (Consts.oneRowHeight * CGFloat(indexPath.section))
-            layoutAttributes.frame = CGRect(x: 0, y: yPosition, width: Consts.rowHeaderWidth, height: Consts.oneRowHeight)
+            let yPosition = Constants.columnHeaderHeight + (Constants.oneRowHeight * CGFloat(indexPath.section))
+            layoutAttributes.frame = CGRect(x: 0, y: yPosition, width: Constants.rowHeaderWidth, height: Constants.oneRowHeight)
         }
         
         return layoutAttributes
@@ -195,8 +195,8 @@ extension MarkSheetCollectionViewLayout {
     override func layoutAttributesForDecorationView(ofKind elementKind: String, at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         guard elementKind == CollectionDecorationView.identifier  else { return nil }
         let layoutAttributes = UICollectionViewLayoutAttributes(forDecorationViewOfKind: elementKind, with: indexPath)
-        let yPos = Consts.columnHeaderHeight + (Consts.oneRowHeight * CGFloat(indexPath.section))
-        layoutAttributes.frame = CGRect(x: 0, y: yPos, width: collectionViewContentSize.width, height: Consts.separatorHeight)
+        let yPos = Constants.columnHeaderHeight + (Constants.oneRowHeight * CGFloat(indexPath.section))
+        layoutAttributes.frame = CGRect(x: 0, y: yPos, width: collectionViewContentSize.width, height: Constants.separatorHeight)
         layoutAttributes.zIndex = 2
         return layoutAttributes
     }

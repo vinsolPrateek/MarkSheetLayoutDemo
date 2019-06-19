@@ -18,15 +18,15 @@ class CollectionDecorationView: UICollectionReusableView, CollectionReusableView
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.customInit()
+        customInit()
     }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        self.customInit()
+        customInit()
     }
     
     func customInit() {
-        self.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        backgroundColor = UIColor.black.withAlphaComponent(0.3)
     }
 }
